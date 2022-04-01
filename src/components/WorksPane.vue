@@ -23,9 +23,9 @@
             >{{ tag }}</v-chip>
           </v-card-text>
           <v-card-actions>
-            <v-spacer></v-spacer>
             <v-btn
             :href="work.repository"
+            class="ml-auto"
             >
               github <v-icon>mdi-github</v-icon>
             </v-btn>
