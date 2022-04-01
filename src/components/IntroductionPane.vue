@@ -13,8 +13,8 @@
         <p>Yuchn</p>
         <p class="text-h5">趣味</p>
         <p>ギター、Web開発、AtCoder</p>
-        <p class="text-h5">好きな言語</p>
-        <p>Python, Java, C++</p>
+        <p class="text-h5">ちょっと出来る言語</p>
+        <p>Python, JavaScript</p>
       </v-col>
     </v-row>
   </v-container>

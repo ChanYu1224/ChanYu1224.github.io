@@ -1,11 +1,11 @@
 <template>
-  <v-container justify="center" align-content="center">
+  <v-container>
     <p class="text-h4 text-center indigo lighten-4 py-4">CONTACT</p>
     <p class="text-h5 text-center">SNS</p>
     <div class="text-center">
       <v-btn
-      v-for="account in sns"
-      :key="account"
+      v-for="(account, index) in sns"
+      :key="index"
       style="text-transform: none"
       :class="account.color"
       class="ma-4"

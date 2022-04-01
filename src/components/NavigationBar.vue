@@ -1,14 +1,13 @@
 <template>
   <v-app-bar
     app
-    color="indigo"
-    absolute
+    class="indigo"
     elevate-on-scroll
   >
-    <v-spacer></v-spacer>
-    <v-toolbar-title class="indigo--text text--lighten-5 text-h4">
+    <v-app-bar-title class="indigo--text text--lighten-5 text-h4 text-center">
       Yuchn's Home Page
-    </v-toolbar-title>
-    <v-spacer></v-spacer>
+    </v-app-bar-title>
+
+    
   </v-app-bar>
 </template>

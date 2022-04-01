@@ -1,30 +1,32 @@
 <template>
-  <v-container justify="center" align-content="center">
+  <v-container>
     <p class="text-h4 text-center indigo lighten-4 py-4">WORKS</p>
     <p>Web開発や機械学習等、浅く広く手を伸ばしています。</p>
     <v-slide-group show-arrows>
-      <v-slide-item v-for="work in works" :key="work">
-        <v-card width="400px" class="mx-4">
+      <v-slide-item v-for="(work, index) in works" :key="index">
+        <v-card width="400px" class="ma-4">
           <v-img
           :src="require(`@/assets/${work.image}`)"
           :aspect-ratio="16/9"
           width="400px"
           ></v-img>
-          <v-card-title primary-title>
+          <v-card-title>
             {{ work.title }}
           </v-card-title>
           <v-card-text>
             <p>最終更新：{{ work.updatedAt }}</p>
             <p>{{ work.description }}</p>
             <v-chip 
-              v-for="tag in work.tags"
-              :key="tag"
-              class="ma-1"
+            v-for="tag in work.tags"
+            :key="tag"
+            class="ma-1"
             >{{ tag }}</v-chip>
           </v-card-text>
-          <v-card-actions align-self="end">
+          <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn :href="work.repository">
+            <v-btn
+            :href="work.repository"
+            >
               github <v-icon>mdi-github</v-icon>
             </v-btn>
           </v-card-actions>
