@@ -56,7 +56,7 @@
                     <p>Master Student of Engineering</p>
                     <p>Nara, Japan</p>
                 </div>
-                <p>
+                <p class="sentence">
                     Thank you for visiting my page! <br><br>
                     I am studying spoken and natural language processing in Japan 
                     and I am deeply interested in how to handle self-supervised learning models of speech, in particular.
@@ -136,7 +136,7 @@
                     <ul>
                         <li v-for="creation in creations">
                             <h2>{{creation.title}}</h2>
-                            <p>{{creation.description}}</p>
+                            <p class="sentence">{{creation.description}}</p>
                             <div class="link-button">
                                 <a v-for="link in creation.links" :href="link.url">[ {{link.name}} ]</a>
                             </div>

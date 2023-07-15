@@ -170,6 +170,9 @@ main b {
 .center-text p {
     margin: 10px 0;
 }
+.sentence {
+    text-align: justify;
+}
 
 /* timelines */
 .timeline {
