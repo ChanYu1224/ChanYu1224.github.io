@@ -67,11 +67,11 @@ aside {
 .link-container li a {
     display: block;
     width: 100%;
-    opacity: 0.7;
     letter-spacing: 2px;
 }
 .link-container li a:hover {
-    opacity: 1;
+    color: black;
+    transition: all 0.3s;
 }
 
 /* sns link */
@@ -94,21 +94,22 @@ aside {
 }
 .sns-container a {
     font-size: 0.8em;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 .sns-container a:hover {
     opacity: 1;
+    transition: all 0.3s;
 }
 
 /* contents */
 main {
     width: calc(100% - 300px);
-    padding: 0 30px 0 100px;
+    padding: 0 0 0 60px;
 }
 main h1 {
     text-align: center;
     font-size: 1.5em;
-    font-weight: 400;
+    font-weight: 500;
     margin: 100px 0 20px 0;
     letter-spacing: 0.15em;
 }
