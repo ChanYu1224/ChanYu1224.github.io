@@ -43,6 +43,44 @@ aside {
     border-radius: 50% / 40% 60% 30% 40%;
     border: 1px solid #cbcbcb;
 }
+.sub-item {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #cbcbcb;
+    background: white;
+    top: 160px;
+    right: 60px;
+}
+.sub-item img {
+    width: 60%;
+}
+.sub-item .bubble {
+    display: block;
+    width: 200px;
+    padding: 5px;
+
+    position: absolute;
+    top: 50px;
+    translate: transformX(-50%);
+
+    font-size: 0.8em;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #cbcbcb;
+
+    opacity: 0;
+    visibility: hidden;
+}
+.sub-item:hover .bubble {
+    opacity: 1;
+    visibility: visible;
+    animation: fade-in 0.3s ease-in-out;
+}
 .name-tag {
     margin-top: 30px;
 }
@@ -67,11 +105,11 @@ aside {
 .link-container li a {
     display: block;
     width: 100%;
+    opacity: 0.6;
     letter-spacing: 2px;
 }
 .link-container li a:hover {
-    color: black;
-    transition: all 0.3s;
+    opacity: 1.0;
 }
 
 /* sns link */
@@ -104,7 +142,7 @@ aside {
 /* contents */
 main {
     width: calc(100% - 300px);
-    padding: 0 0 0 60px;
+    padding: 0 0 0 80px;
 }
 main h1 {
     text-align: center;
@@ -121,6 +159,10 @@ main h2 {
 }
 main p {
     font-size: 1.0em;
+}
+main b {
+    font-weight: 400;
+    border-bottom: 1px solid var(--main-text-color);
 }
 .center-text {
     text-align: center;
@@ -244,13 +286,15 @@ main p {
 @keyframes fade-in {
     from {
         opacity: 0;
+        visibility: hidden;
     }
     to {
         opacity: 1;
+        visibility: visible;
     }
 }
 .fade-in {
-    animation: fade-in 0.5s ease-in;
+    animation: fade-in 0.5s ease-in-out;
 }
 
 footer {
