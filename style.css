@@ -341,14 +341,12 @@ footer {
     }
     .profile-container {
         font-size: 1.0rem;
+        transform: none;
     }
 }
 
 @media (max-width: 680px) {
     body {
         font-size: 0.8em;
-    }
-    .profile-container {
-        font-size: 1.0rem;
     }
 }
