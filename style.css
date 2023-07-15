@@ -147,7 +147,7 @@ main h1 {
     margin: 100px 0 20px 0;
     letter-spacing: 0.15em;
 }
-main h1 i {
+main i {
     margin-right: 10px;
 }
 main h2 {
@@ -162,10 +162,10 @@ main b {
 }
 .center-text {
     text-align: center;
-    padding-bottom: 20px;
+    margin-bottom: 30px;
 }
 .center-text p {
-    display: inline-block;
+    margin: 10px 0;
 }
 
 /* timelines */
@@ -261,6 +261,14 @@ main b {
 }
 .plain-list p {
     font-size: 0.8em;
+}
+.paper-award {
+    font-size: 0.9em;
+    margin: 10px 0;
+    font-weight: 400;
+}
+.paper-award i {
+    color: goldenrod;
 }
 
 /* button */

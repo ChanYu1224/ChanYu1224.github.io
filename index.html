@@ -49,13 +49,19 @@
             <div id="aboutme">
                 <h1>ABOUT ME</h1>
                 <div class="center-text">
-                    <p>Researcher / Master Student of Engineering</p>
+                    <p>Researcher / Nara Institute of Science and Technology</p>
+                    <p>Master Student of Engineering</p>
+                    <p>Nara, Japan</p>
                 </div>
                 <p>
                     Thank you for visiting my page! <br><br>
-                    I'm researching on speech and natural language processing in Japan,
-                    and deeply interested in the modality of speech, and my research forcuses on how we should handle sound information. <br><br>
-                    I love ramen. 
+                    I am studying spoken and natural language processing in Japan 
+                    and I am deeply interested in how to handle self-supervised learning models of speech, in particular.
+                    Speech SSL models contain a wealth of internally useful information, 
+                    and my research focuses on effectively extracting that information to improve the performance of downstream tasks. <br><br>
+                    I use PyTorch as my deep learning framework and I am skilled at implementing the logical components. 
+                    Additionally, I have experience utilizing Python web development frameworks like Django and FastAPI, 
+                    as well as proficiency in prototyping.
                 </p>
             </div>
             <div id="educations">
@@ -95,7 +101,10 @@
                         <li v-for="publication in publications">
                             <h2>{{publication.title}}</h2>
                             <p v-html="publication.authors"></p>
-                            <p>{{publication.publish}}</p>
+                            <p v-html="publication.publish"></p>
+                            <div class="paper-award" v-if="publication.award != null">
+                                <i class="fa-solid fa-award"></i>{{publication.award}}
+                            </div>
                             <div class="link-button">
                                 <a v-for="link in publication.links" :href="link.url">[ {{link.name}} ]</a>
                             </div>
@@ -230,6 +239,7 @@
                     title: "Tagged End-to-End Simultaneous Speech Translation Training using Simultaneous Interpretation Data",
                     authors: "Yuka Ko, Ryo Fukuda, <b>Yuta Nishikawa</b>, Yasumasa Kano, Katsuhito Sudoh and Satoshi Nakamura",
                     publish: "In Proceedings of the 20th International Conference on Spoken Language Translation (IWSLT), 2023",
+                    award: "Best Student Paper Award",
                     type: "international conference",
                     links: [
                         {
