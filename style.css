@@ -15,6 +15,7 @@ body {
 }
 .container {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     max-width: 1400px;
     box-sizing: border-box;
@@ -36,7 +37,8 @@ aside {
     margin-top: 100px;
     padding: 50px 0;
     position: sticky;
-    top: 10vh;
+    top: 50vh;
+    transform: translateY(-50%);
 }
 .profile-container img {
     width: 50%;
@@ -171,8 +173,8 @@ main b {
 /* timelines */
 .timeline {
     position: relative;
-    width: calc(100% - 50px);
-    margin-left: 50px;
+    width: calc(100% - 70px);
+    margin-left: 70px;
 }
 .timeline::before {
     content: '';
@@ -215,31 +217,37 @@ main b {
     font-size: 0.8em;
 }
 .start-period {
-    position: absolute;
     display: block;
     width: 70px;
+    padding: 5px 0;
+    transform: translateY(-50%);
+
+    position: absolute;
     top: 75%;
     left: -75px;
+
     font-size: 0.6em;
     font-weight: 500;
     letter-spacing: 0.1em;
-    transform: translateY(-50%);
     text-align: center;
-    background-color: rgb(246, 251, 255);
+    background-color: var(--main-bg-color);
     z-index: 3;
 }
 .end-period {
-    position: absolute;
     display: block;
     width: 70px;
+    padding: 5px 0;
+    transform: translateY(-50%);
+
+    position: absolute;
     top: 25%;
     left: -75px;
+
     font-size: 0.6em;
     font-weight: 500;
     letter-spacing: 0.1em;
-    transform: translateY(-50%);
     text-align: center;
-    background-color: rgb(246, 251, 255);
+    background-color: var(--main-bg-color);
     z-index: 3;
 }
 
@@ -299,6 +307,7 @@ main b {
     animation: fade-in 0.5s ease-in-out;
 }
 
+/* footer */
 footer {
     width: 100%;
     padding: 20px 0;
