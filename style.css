@@ -60,7 +60,7 @@ aside {
     width: 60%;
 }
 .sub-item .bubble {
-    display: block;
+    display: none;
     width: 200px;
     padding: 5px;
 
@@ -72,13 +72,9 @@ aside {
     background-color: white;
     border-radius: 10px;
     border: 1px solid #cbcbcb;
-
-    opacity: 0;
-    visibility: hidden;
 }
 .sub-item:hover .bubble {
-    opacity: 1;
-    visibility: visible;
+    display: block;
     animation: fade-in 0.3s ease-in-out;
 }
 .name-tag {
@@ -286,11 +282,9 @@ main b {
 @keyframes fade-in {
     from {
         opacity: 0;
-        visibility: hidden;
     }
     to {
         opacity: 1;
-        visibility: visible;
     }
 }
 .fade-in {
