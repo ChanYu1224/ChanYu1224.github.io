@@ -102,7 +102,7 @@
                             <h2>{{publication.title}}</h2>
                             <p v-html="publication.authors"></p>
                             <p v-html="publication.publish"></p>
-                            <div class="paper-award" v-if="publication.award != null">
+                            <div class="award" v-if="publication.award != null">
                                 <i class="fa-solid fa-award"></i>{{publication.award}}
                             </div>
                             <div class="link-button">

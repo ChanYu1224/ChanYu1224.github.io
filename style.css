@@ -262,12 +262,12 @@ main b {
 .plain-list p {
     font-size: 0.8em;
 }
-.paper-award {
+.award {
     font-size: 0.9em;
     margin: 10px 0;
     font-weight: 400;
 }
-.paper-award i {
+.award i {
     color: goldenrod;
 }
 
@@ -310,9 +310,18 @@ footer {
 
 /* media query */
 @media (max-width: 900px) {
-    aside {
+    .profile-container img {
+        max-width: 200px;
+    }
+    .sub-item {
         display: none;
     }
+    aside {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
     main {
         width: 100%;
         padding: 0 50px;
@@ -325,6 +334,6 @@ footer {
 
 @media (max-width: 680px) {
     body {
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
 }
