@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="x7Y3hte2ajqrFPPG3NzShJ3ku7NH9SFrRdwVd5trQqA" />
     <title>Yuta Nishikawa</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -77,6 +78,9 @@
                         <p>{{education.department}}</p>
                         <p v-if="education.laboratory != null">{{education.laboratory}}</p>
                         <p>{{education.degree}}</p>
+                        <div class="award" v-for="award in education.awards">
+                            <i class="fa-solid fa-award"></i>{{award}}
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -90,6 +94,9 @@
                             <h2>{{experiment.organization}}</h2>
                             <p>{{experiment.department}}</p>
                             <p>{{experiment.position}}</p>
+                            <div class="award" v-for="award in experiment.awards">
+                                <i class="fa-solid fa-award"></i>{{award}}
+                            </div>
                             <div class="link-button">
                                 <a v-for="link in experiment.links" :href="link.url">[ {{link.name}} ]</a>
                             </div>
@@ -122,7 +129,7 @@
                         <li v-for="activity in activities">
                             <div class="period middle-period">{{activity.date}}</div>
                             <h2>{{activity.title}}</h2>
-                            <p>{{activity.description}}</p>
+                            <p v-html="activity.description"></p>
                             <div class="link-button">
                                 <a v-for="link in activity.links" :href="link.url">[ {{link.name}} ]</a>
                             </div>
@@ -190,7 +197,12 @@
                     institution: "National Institute of Science and Technology, Nara College, Japan",
                     department: "Faculty of Advanced Engineering",
                     laboratory: "Matsumura Laboratory",
-                    degree: "Bachelor of Engineering",
+                    degree: "Bachelor of Engineering / Completed Global Engineering Cooperative Education Program (Advanced)",
+                    awards: [
+                        "Graduation at the Top",
+                        "Best Research Award",
+                        "English Learning Encouragement Award",
+                    ]
                 },
                 {
                     start: "2015 Apr.",
@@ -234,7 +246,10 @@
                     end: "2022 Mar.",
                     organization: "学習塾 ゴールフリー",
                     department: "Ikoma School",
-                    position: "Cram School Teacher / Project Manager / School Manager / Area Project Manager"
+                    position: "Cram School Teacher / Project Manager / School Manager / Area Project Manager",
+                    awards: [
+                        "1st Prize of Area-wise Edu-Beit Grand Prix, 2020",
+                    ]
                 }
             ],
             publications: [
@@ -315,21 +330,29 @@
             activities: [
                 {
                     date: "2022 Mar.",
-                    title: "Graduation at the Top from National Institute of Science and Technology, Nara College",
-                    description: "GPA: 3.87 / 4.00"
+                    title: "Graduation at the Top",
+                    description: `
+                    from National Institute of Science and Technology, Nara College <br>
+                    GPA: 3.87 / 4.00
+                    `,
                 },
                 {
                     date: "2022 Mar.",
-                    title: "Research Excellence Award （研究優秀賞） from National Institute of Science and Technology, Nara College",
-                    description: "Title: Automatic Estimation of Electric Guitar Technique Proficiency using RVM",
+                    title: "Research Excellence Award （研究優秀賞） ",
+                    description: `
+                    from National Institute of Science and Technology, Nara College <br>
+                    Title: Automatic Estimation of Electric Guitar Technique Proficiency using RVM
+                    `,
                 },
                 {
                     date: "2022 Jan.",
-                    title: "English Learning Encouragement Award （英語学習奨励賞） from National Institute of Science and Technology, Nara College",
+                    title: "English Learning Encouragement Award （英語学習奨励賞）",
+                    description: "from National Institute of Science and Technology, Nara College",
                 },
                 {
                     date: "2021 Feb.",
                     title: "関西NBCニュービジネスアワード2020 ビジネスプラン部門 最優秀賞",
+                    description: "title: MeeCon（ミーコン）～アイデアを実現するテクノロジーファンディング～",
                     links: [
                         {
                             name: "Article",
